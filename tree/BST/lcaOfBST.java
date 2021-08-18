@@ -1,3 +1,12 @@
+/*
+ancestor of a tree meeting at the lowest level,
+
+suppose a and b are the leaf of the tree , 
+both a and b are meeting at a point (d) , which is the lowest 
+point.. hence it should return 'd' as the output...
+
+*/
+
 import java.io.*;
 import java.util.*;
 
@@ -80,7 +89,9 @@ public class lcaOfBST {
   }
 
 
-//code written here 
+//code written here
+
+//if the node is unable to move left or right the print the node.data
   public static int lca(Node node, int d1, int d2) {
         if(d1 > node.data && d2 > node.data) { // right side
             return lca(node.right, d1, d2);
