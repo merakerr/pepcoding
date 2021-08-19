@@ -1,4 +1,7 @@
  /*
+
+
+ print the values between the given range
               20
             /    \
            10      35
@@ -11,7 +14,7 @@
     b = 30
 
     all nodes = 10,14,17,20
-
+  
 
  
  
@@ -99,7 +102,7 @@
       }
     
 
-      //code written here *****************************************
+      //code written here *******************************************
       public static void pir(Node node, int d1, int d2) {
 
         if(node == null){
