@@ -30,23 +30,47 @@ import java.util.*;
             if(val == nums[i]) {
                 // increase the count of same element
                 count++;
-            } else {
-                if(count > 0) {
-                    // pair distinct pair
-                    count--;
-                } else {
-                    val = nums[i];
-                    count = 1;
-                }
+            // } else {
+            //     if(count > 0) {
+            //         // pair distinct pair
+            //         count--;
+            //     } else {
+            //         val = nums[i];
+            //         count = 1;
+            //     }
+            }
+
+            else{
+                count--;
+
+            }
+            if(count == 0){
+                val = nums[i];
+                count = 1;
             }
             i++;
         }
         // majority always exist, so val is result
         return val;
         }
-        public static void printMajorityElement(int[] nums) {
-            int val = validCandidate(nums);
-            System.out.println(val);
+        public static void printMajorityElement(int[] arr) {
+            int val = validCandidate(arr);
+           
+            //find freq for potential candidate
+            int count = 0;
+            for(int i = 0; i < arr.length; i++){
+                if(arr[i] == val){
+                   count++;
+                }
+            }
+            if(count > arr.length/2){
+                //majority of element is value
+                System.out.println(val);
+            }
+            else{
+                //no majority element
+                System.out.println("No Majority Element Exist");
+            }
         }
     
         // ~~~~~~~~~~~~~~~~~~~Input Management~~~~~~~~~~~~~~~~~~~
