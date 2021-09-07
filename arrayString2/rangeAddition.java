@@ -29,14 +29,14 @@ After applying operation [0, 2, -2]:
 */
 
 
-
+import java.util.*;
 public class rangeAddition {
     /**
      * @param length: the length of the array
      * @param updates: update operations
      * @return: the modified array after all k operations were executed
      */
-    public int[] getModifiedArray(int length, int[][] updates) {
+    public static  int[] getModifiedArray(int length, int[][] updates) {
         int[] res = new int[length];
 
         for(int i = 0; i < updates.length; i++) {
@@ -59,4 +59,31 @@ public class rangeAddition {
         }
         return res;
     }
+
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        
+        int length = scn.nextInt();
+
+        int nq = scn.nextInt();
+        
+        int[][] queries = new int[nq][3];
+
+        for(int q = 0; q < nq; q++) {
+            queries[q][0] = scn.nextInt();
+            queries[q][1] = scn.nextInt();
+            queries[q][2] = scn.nextInt();
+        }
+
+
+        int[] res = getModifiedArray(length, queries);
+
+        for(int i = 0; i < res.length; i++) {
+            System.out.print(res[i] + " ");
+        }
+    }
 }
+
+
+
