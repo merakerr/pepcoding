@@ -67,7 +67,6 @@ public class slidiingWindowMaximum {
                 j = rgi[j]; //increasing j index till window size
             }
             //add to the max item in res array
-            //res[indx] = rgi[j]-1;
             res[indx] = arr[j];
             indx++;
         }
