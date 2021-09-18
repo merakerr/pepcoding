@@ -35,8 +35,8 @@ public class digitMultiplier {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        String res = getSmallest(str);
+        Long val = sc.nextLong();
+        String res = getSmallest(val);
         System.out.println(res);
     }
 }
