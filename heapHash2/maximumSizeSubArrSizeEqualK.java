@@ -15,7 +15,6 @@
  8. You have to complete the maxLenSubarray function. It takes as input an array and K. It should return the maximum length of subarray whose sum is K. If no such subarray, it should return 0.
  9. Don't change the code of main and display.
 */
-    
     import java.util.*;
  
     public class maximumSizeSubArrSizeEqualK {
@@ -23,6 +22,7 @@
         // This is a functional problem. You have to complete this function.
         // It takes as input an array and K.
         // It should return the length of maximum subarray whose sum is K. If no such subarray, return 0.
+    
         public static int maxLenSubarray(int[] arr, int k) {
             int index = -1;
             int sum = 0;
@@ -36,12 +36,15 @@
                 if(map.containsKey(found)){
                     int diff = i - map.get(found);
                     max_len = Math.max(max_len, diff);
-                }else{
+                }
+                
+                if(map.containsKey(sum) == false){
                     map.put(sum, i);
                 }
             }
             return max_len;
         }
+    
     
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
